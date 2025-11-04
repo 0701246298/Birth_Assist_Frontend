@@ -82,4 +82,33 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSpecialists();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const hero = document.getElementById("home");
+
+  const images = [
+    "Images/1.jpg",
+    "Images/2.jpg",
+    "Images/3.jpg",
+    "Images/4.jpg",
+    "Images/5.jpg"
+  ];
+
+  let current = 0;
+
+  function changeBackground() {
+    hero.style.opacity = 0; // fade out
+    setTimeout(() => {
+      hero.style.backgroundImage = `url('${images[current]}')`;
+      hero.style.opacity = 1; // fade in
+      current = (current + 1) % images.length;
+    }, 1000);
+  }
+
+  // initialize background
+  hero.style.backgroundImage = `url('${images[0]}')`;
+
+  // change every 5 seconds
+  setInterval(changeBackground, 5000);
+});
+
 
