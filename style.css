@@ -194,7 +194,8 @@ button#getStarted:hover {
   padding: 20px;
   width: 250px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border 0.3s;
+  cursor: pointer; /* show clickable */
 }
 
 .card:hover {
@@ -227,6 +228,19 @@ button#getStarted:hover {
   color: #f39c12;
   font-size: 1.2rem;
   margin-top: 10px;
+}
+
+/* Active/Clicked Card Style */
+.card.active {
+  background-color: #003366; /* dark blue */
+  color: #fff;
+  border: 3px solid black; /* border radius black outline */
+}
+
+.card.active h3,
+.card.active p,
+.card.active .rating {
+  color: #fff; /* text turns white on dark background */
 }
 
 /* Responsive adjustments */
