@@ -1,12 +1,14 @@
+/* Global Styles */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f8fbff;
-  color: #333;
+  background-color: #e6f7ff; /* light sky blue */
+  color: #033e57; /* dark teal-blue text */
 }
 
+/* Header */
 header {
-  background-color: #e91e63;
+  background-color: #00bfff; /* bright sky blue */
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -24,135 +26,14 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: opacity 0.3s ease;
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(to right, #f8bbd0, #fce4ec);
+nav a:hover {
+  opacity: 0.8;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  color: #880e4f;
-  animation: fadeIn 2s ease-in;
-}
-
-button {
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-button:hover {
-  background-color: #c2185b;
-}
-
-/* Specialist Cards */
-.specialists {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 250px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.rating {
-  color: #e91e63;
-  font-size: 1.2rem;
-}
-
-/* Contact Form */
-.contact {
-  background-color: #fce4ec;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-footer {
-  text-align: center;
-  background-color: #f06292;
-  color: white;
-  padding: 1rem;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff8f8;
-  color: #333;
-}
-
-header {
-  background-color: #e91e63;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* Hero Section */
 .hero {
   height: 90vh;
   display: flex;
@@ -161,14 +42,15 @@ nav a {
   align-items: center;
   text-align: center;
   color: white;
+  background: linear-gradient(to right, #66cfff, #00bfff);
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease-in-out;
   position: relative;
+  transition: opacity 1s ease-in-out;
 }
 
 .hero h2, .hero p {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero::before {
@@ -176,7 +58,7 @@ nav a {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 0;
 }
 
@@ -185,8 +67,13 @@ nav a {
   z-index: 1;
 }
 
+.hero h2 {
+  font-size: 2.5rem;
+  animation: fadeIn 2s ease-in;
+}
+
 button#getStarted {
-  background-color: #ff69b4;
+  background-color: #0099cc;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -194,37 +81,18 @@ button#getStarted {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-button#getStarted:hover {
-  background-color: #ff1493;
-}
-
-
-.hero h2 {
-  font-size: 2.5rem;
-  color: #880e4f;
-  animation: fadeIn 2s ease-in;
-}
-
-button {
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
   margin-top: 20px;
 }
 
-button:hover {
-  background-color: #c2185b;
+button#getStarted:hover {
+  background-color: #007acc;
 }
 
-/* Specialist Cards */
+/* Specialists Section */
 .specialists {
   text-align: center;
   padding: 60px 20px;
+  background-color: #b3ecff;
 }
 
 .card-container {
@@ -236,7 +104,7 @@ button:hover {
 }
 
 .card {
-  background-color: #fff;
+  background-color: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 20px;
@@ -254,13 +122,13 @@ button:hover {
 }
 
 .rating {
-  color: #e91e63;
+  color: #007acc;
   font-size: 1.2rem;
 }
 
-/* Contact Form */
+/* Contact Section */
 .contact {
-  background-color: #fce4ec;
+  background-color: #cceeff;
   padding: 60px 20px;
   text-align: center;
 }
@@ -277,33 +145,20 @@ form {
 input, textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #0099cc;
   border-radius: 8px;
-}
-
-footer {
-  text-align: center;
-  background-color: #f06292;
-  color: white;
-  padding: 1rem;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Gallery Section */
 .gallery {
   text-align: center;
   padding: 50px 20px;
-  background: #f9f9f9;
+  background-color: #e0f7ff;
 }
 
 .gallery h2 {
   font-size: 2em;
-  color: #444;
+  color: #004d66;
   margin-bottom: 30px;
 }
 
@@ -351,7 +206,7 @@ footer {
 }
 
 .flip-card-back {
-  background-color: #5aa469;
+  background-color: #0099cc;
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -361,3 +216,16 @@ footer {
   padding: 15px;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #00bfff;
+  color: white;
+  padding: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
