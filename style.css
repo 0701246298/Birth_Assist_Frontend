@@ -164,7 +164,8 @@ button#getStarted {
 
 button#getStarted:hover {
   background-color: #007acc;
-}/* Specialists Section */
+}
+/* Specialists Section */
 .specialists {
   text-align: center;
   padding: 60px 20px;
@@ -194,32 +195,34 @@ button#getStarted:hover {
   width: 250px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border 0.3s;
-  cursor: pointer; /* clickable */
+  cursor: pointer; /* show clickable */
 }
-
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   background-color: #003366; /* dark blue */
-  border: 3px solid black;
-  color: #fff;
+  border: 3px solid black;   /* black border */
+  color: #fff;               /* text turns white */
 }
 
+/* Make text inside card white on hover */
 .card:hover h3,
 .card:hover p,
 .card:hover .rating {
   color: #fff;
 }
 
+/* Image border can also change if you want */
 .card:hover img {
-  border: 3px solid #f39c12;
+  border: 3px solid #f39c12; /* optional: golden border on hover */
 }
+
 
 .card img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular image */
   margin-bottom: 15px;
   border: 3px solid #007acc;
 }
@@ -242,36 +245,17 @@ button#getStarted:hover {
   margin-top: 10px;
 }
 
-/* Booking Form inside card */
-.booking-form {
-  display: none; /* hidden initially */
-  margin-top: 15px;
-  text-align: left;
+/* Active/Clicked Card Style */
+.card.active {
+  background-color: #003366; /* dark blue */
+  color: #fff;
+  border: 3px solid black; /* border radius black outline */
 }
 
-.booking-form input {
-  width: 100%;
-  margin-bottom: 8px;
-  padding: 8px;
-  border: 1px solid #007acc;
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-.booking-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #0099cc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.booking-form button:hover {
-  background-color: #007acc;
+.card.active h3,
+.card.active p,
+.card.active .rating {
+  color: #fff; /* text turns white on dark background */
 }
 
 /* Responsive adjustments */
