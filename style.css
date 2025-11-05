@@ -197,11 +197,26 @@ button#getStarted:hover {
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border 0.3s;
   cursor: pointer; /* show clickable */
 }
-
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background-color: #003366; /* dark blue */
+  border: 3px solid black;   /* black border */
+  color: #fff;               /* text turns white */
 }
+
+/* Make text inside card white on hover */
+.card:hover h3,
+.card:hover p,
+.card:hover .rating {
+  color: #fff;
+}
+
+/* Image border can also change if you want */
+.card:hover img {
+  border: 3px solid #f39c12; /* optional: golden border on hover */
+}
+
 
 .card img {
   width: 150px;
