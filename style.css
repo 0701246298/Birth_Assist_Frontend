@@ -6,14 +6,92 @@ body {
   color: #033e57; /* dark teal-blue text */
 }
 
-/* Header */
+/* Header *//* ===== Header Section ===== */
 header {
-  background-color: #00bfff; /* bright sky blue */
+  background-color: skyblue;
   color: white;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Search bar --- */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 25px;
+  width: 180px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #0288d1;
+}
+
+/* --- Logo and title --- */
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+/* --- Navigation --- */
+.header-right ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header-right a:hover {
+  color: #004d80;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-bar input {
+    width: 150px;
+  }
+
+  .header-right ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 nav ul {

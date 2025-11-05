@@ -7,16 +7,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+ <header>
+  <!-- Left side: Search bar -->
+  <div class="header-left">
+    <form class="search-bar" action="https://www.google.com/search" method="get" target="_blank">
+      <input type="text" name="q" placeholder="Search here..." required>
+      <button type="submit">🔍</button>
+    </form>
+  </div>
+
+  <!-- Center: Logo and site title -->
+  <div class="header-center">
+    <img src="Images/logo.png" alt="Birth Assist Logo" class="logo">
     <h1>Birth_Assist</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#specialists">Specialists</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </div>
+
+  <!-- Right: Navigation menu -->
+  <nav class="header-right">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#specialists">Specialists</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <!-- Hero Section -->
   <section class="hero" id="home">
@@ -32,7 +48,7 @@
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="Images/care1.jpg" alt="Care 1">
+          <img src="Images/care1.jpg"  alt="Care 1">
         </div>
         <div class="flip-card-back">
           <h3>Trusted Care</h3>
