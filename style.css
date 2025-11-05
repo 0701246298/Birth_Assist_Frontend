@@ -165,12 +165,18 @@ button#getStarted {
 button#getStarted:hover {
   background-color: #007acc;
 }
-
 /* Specialists Section */
 .specialists {
   text-align: center;
   padding: 60px 20px;
   background-color: #b3ecff;
+  font-family: Arial, sans-serif;
+}
+
+.specialists h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #005f7f;
 }
 
 .card-container {
@@ -182,26 +188,58 @@ button#getStarted:hover {
 }
 
 .card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 20px;
   width: 250px;
-  transition: transform 0.3s;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card img {
-  width: 100%;
-  border-radius: 12px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 15px;
+  border: 3px solid #007acc;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #007acc;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
 }
 
 .rating {
-  color: #007acc;
+  color: #f39c12;
   font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .card {
+    width: 45%; /* 2 cards per row */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%; /* 1 card per row */
+  }
 }
 
 /* Contact Section */
